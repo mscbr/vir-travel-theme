@@ -1,0 +1,38 @@
+//TRAVEL BLOG 
+//TEXT PROPERTIES
+//BY: mscbr
+
+
+//sizes
+$h1: 46px;
+$h2: 38px;
+$h3: 30px;
+$h4: 24px;
+$h5: 16px;
+
+
+h1 {
+    font-family: $subrayada;
+    font-size: $h1;
+    text-align: center;
+}
+h3 {
+    text-align: center;
+    font-size: $h3;
+}
+h2 {
+    text-align: center;
+    font-size: $h2;
+}
+h4 {
+    text-align: center;
+    font-size: $h4;
+}
+h5 {
+    font-size: $h5;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: 800;
+}
+
+

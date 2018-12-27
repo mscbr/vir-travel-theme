@@ -1,0 +1,50 @@
+//TRAVEL BLOG 
+//FOOTER
+//BY: mscbr
+
+#sitemap {
+    width: 350px;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.5;
+    li {
+        display: inline;
+        margin: 5px;
+    }
+    a:hover {
+        color: $primary;
+    }
+}
+
+#footer {
+    width: 100%;
+    text-align: center;
+    color: $secondary;
+    padding: 25px;
+    background: $accent;
+    #button-up {
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        border: 1px solid $secondary;
+        border-radius: 50%;
+        margin-bottom: 15px;
+        a {
+            text-decoration: none;
+            color: $secondary;
+            transition: 0.3s;
+            &:hover {
+                cursor: pointer;
+                color: $primary;
+                //font-weight: 800;
+            }
+        }
+        
+    }
+    h5 {
+        font-size: 12px;
+    }
+}

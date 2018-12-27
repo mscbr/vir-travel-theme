@@ -1,0 +1,49 @@
+//TRAVEL BLOG 
+//LAYOUT
+//BY: mscbr
+
+$shadow-slider: 12px 16px -6px #000;
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    font-family: $montserrat;
+    background-color: $accent;
+    color: $secondary;
+}
+
+
+//background cuts
+#background1 {
+    position: absolute;
+    clip-path: polygon(0 0, 100% 0, 100% 18%, 0% 100%);
+    background-color: $primary;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#background2 {
+    position: absolute;
+    clip-path: polygon(0 24%, 100% 77%, 100% 91%, 0% 100%);
+    background-color: $primary;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#background3 {
+    position: absolute;
+    clip-path: polygon(0 24%, 100% 77%, 100% 100%, 0% 100%);
+    background-color: $primary;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.current-menu-item {
+    opacity: 0.7;
+}
+

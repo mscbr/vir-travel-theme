@@ -1,0 +1,43 @@
+//TRAVEL BLOG 
+//page.php design
+//BY: mscbr
+
+
+
+
+
+#page {
+
+    width: 85%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    color: $secondary;
+    background-color: $primary;
+    border-radius: 10px;
+    box-shadow: 0 12px 16px -6px #000;
+
+    #page-title {
+        background-color: $secondary;
+        color: $primary;
+        padding: 3px;
+    }
+    #page-content {
+        // height: 95%;
+        // width: 95%;
+        margin: 10px;
+        padding: 35px;
+        h1, h2, h3, h4, h5 {
+            margin: 5px;
+        }
+        p {
+            text-align: justify;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+    }
+}
+

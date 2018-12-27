@@ -1,0 +1,21 @@
+//TRAVEL BLOG 
+//SECTION: WELCOME
+//BY: mscbr
+
+
+
+
+#welcome {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: $secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #headers {
+        margin-top: 50px;
+        //margin-bottom: 70px;
+    }
+}  

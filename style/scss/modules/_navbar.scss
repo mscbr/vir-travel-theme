@@ -1,0 +1,97 @@
+//VIR - TRAVEL BLOG THEME
+//NAVBAR STYLES
+//BY: mscbr
+
+
+
+
+#navbar {
+    position: fixed;
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 3;
+    background: transparent;
+   
+    #navlogo>a:hover {
+        text-shadow: none;
+        font-weight: 400;
+    }
+    .nav-link {
+        color: $secondary;
+        letter-spacing: 2px;
+        margin-left: 40px;
+        text-decoration: none;
+        //color: $secondary;
+        transition: 0.3s;
+        &:hover {
+            text-shadow: 0.5px 1px $primary;
+            font-weight: 800;
+            letter-spacing: 3px;
+        }
+        
+    }
+    
+}
+
+#header {
+    color: $secondary;
+    //background: $primary;
+}
+
+.nav-dropdown {
+    //width: 100%;
+    display: inline;
+    text-align: right;
+    
+    .navbtn {
+        text-decoration: none;
+        color: $secondary;
+        font-size: initial;
+        font-family: $montserrat;
+        background: none;
+        border: 1px solid $secondary;
+        letter-spacing: 2px;
+        margin-left: 40px;
+        text-align: center;
+       
+    }
+    .drop-content {
+        display: none;
+        position: absolute;
+        right: 2%;
+
+        font-size: 18px;
+        width: 200px;
+        background-color: #f1f1f1;
+        color: $secondary;
+        box-shadow: 0 12px 16px -6px #000;
+        z-index: 1;
+        
+        a {
+            color: $secondary;
+            padding: 3px;
+            margin-right: 2px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 0.5px solid $secondary;
+            &:hover {
+                background-color: $secondary;
+                color: $primary;
+                
+            }
+        }
+       
+    }
+    &:hover .drop-content {
+        display: block;
+        
+    }
+
+    &:hover .navbtn {
+        background-color: $secondary;
+        color: $primary;
+        cursor: pointer;
+    }
+}

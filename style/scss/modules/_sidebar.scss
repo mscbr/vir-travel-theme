@@ -1,0 +1,80 @@
+//TRAVEL BLOG 
+//SIDEBAR
+//BY: mscbr
+
+//a/link fix
+a {
+    text-decoration: none;
+    color: $secondary;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    background-color: transparent;
+    color: $secondary;
+    height: 100%;
+    width: 80%;
+   
+    
+    h5 {
+        font-size: 18px;
+        color: $primary;
+        background: $secondary-opacity;
+        letter-spacing: 2px;
+
+    }
+}
+#recent-posts {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    .recent-post {
+        margin-top: 15px;
+        border-bottom: 0.5px solid $secondary;
+        font-size: 14px;
+        line-height: 1.2;
+        text-align: justify;
+        padding: 5px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        h5 {
+            font-size: $h5;
+            font-weight: 900;
+            text-align: center;
+            color: $secondary;
+            background: none;
+            margin-bottom: 5px;
+        }
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+   
+}
+#sidebar-pics {
+
+    #sidebar-pics-holder {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        margin: auto;
+
+        
+
+        img {
+            height: 60px;
+            width: 60px;
+            object-fit: cover;
+            margin: 7px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            &:hover {
+                transform: scale(1.15);
+                border-radius: 20%;
+                cursor: pointer;
+            }
+        }
+        
+    }
+
+
+}

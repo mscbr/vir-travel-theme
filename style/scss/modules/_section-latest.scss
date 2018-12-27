@@ -1,0 +1,33 @@
+//TRAVEL BLOG 
+//SECTION: LATEST
+//BY: mscbr
+
+#latest {
+    height: 100%;
+    width: 82%;
+    // margin: 0 auto;
+    //margin-left: auto;
+    margin: auto;
+
+
+    margin-top: 50px;
+    margin-bottom: 600px;
+
+    display: grid;
+    grid-template-columns: 350px 350px 320px;
+    grid-template-rows: 400px 400px 400px;
+    grid-template-areas: "post post sidebar"
+                        "post post sidebar"
+                        "post post sidebar";
+    grid-gap: 13px;
+    grid-column-gap: 40px;
+
+  
+}
+
+//RESOLUTION WIDER THAN 1440px
+@media only screen and (min-width: 1440px) {
+    #latest {
+        width: 50%;
+    }
+}
