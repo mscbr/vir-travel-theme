@@ -1,0 +1,33 @@
+{
+  "name": "vir-travel-theme",
+  "version": "1.0.0",
+  "description": "Travel blog WordPress theme.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "build": "webpack --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mscbr/vit-travel-theme.git"
+  },
+  "keywords": [
+    "travel",
+    "blo",
+    "theme"
+  ],
+  "author": " <Maciej Scibor>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mscbr/vit-travel-theme/issues"
+  },
+  "homepage": "https://github.com/mscbr/vit-travel-theme#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.4",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2"
+  }
+}
