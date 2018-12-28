@@ -18,7 +18,8 @@
             <a href="#background2" class="nav-link">NEWEST</a>
             <a href="#about" class="nav-link">ABOUT</a>
             <a href="<?php echo site_url('/archive'); ?>" class="nav-link">ARCHIVE</a>
-            <a href="" class="nav-link" id="searchbtn">SEARCH</a>
+            <a href="" class="nav-link" id="search-trigger">SEARCH</a>
+            <!-- <button  class="nav-link" id="search-trigger">SEARCH</button> -->
 
             <a href="#" class="nav-link">CONTACT</a>
             <div class="nav-dropdown">

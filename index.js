@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//LIVE SEARCH\nclass Search {\n  constructor() {}\n\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Search);\n\n//# sourceURL=webpack:///./src/components/liveSearch.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n//LIVE SEARCH\nclass Search {\n  constructor() {\n    this.openButton = document.getElementById(\"search-trigger\");\n    this.closeButton = document.getElementById(\"search-overlay-btn-close\");\n    this.searchOverlay = document.getElementById(\"search-overlay\");\n    this.events();\n  } //events\n\n\n  events() {\n    this.openButton.addEventListener(\"click\", this.openOverlay.bind(this));\n    this.closeButton.addEventListener(\"click\", this.closeOverlay.bind(this));\n  } //methods\n\n\n  openOverlay() {\n    event.preventDefault();\n    this.searchOverlay.classList.add(\"search-overlay--active\");\n  }\n\n  closeOverlay() {\n    this.searchOverlay.classList.remove(\"search-overlay--active\");\n  }\n\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Search);\n\n//# sourceURL=webpack:///./src/components/liveSearch.js?");
 
 /***/ }),
 
@@ -130,7 +130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n//SLOWSCROLL\nfunction jQuery
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_slowScroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/slowScroll */ \"./src/components/slowScroll.js\");\n/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/slider */ \"./src/components/slider.js\");\n/* harmony import */ var _components_liveSearch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/liveSearch */ \"./src/components/liveSearch.js\");\n//VIR - TRAVEL BLOG THEME\n//PAGES FUNCTIONS\n//BY: mscbr\n\n\n\nconst liveSearch = new _components_liveSearch__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\njQuery(document).ready(function () {\n  'use strict'; //functions to load\n\n  Object(_components_slowScroll__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  Object(_components_slider__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  liveSearch();\n});\n\n//# sourceURL=webpack:///./src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_slowScroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/slowScroll */ \"./src/components/slowScroll.js\");\n/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/slider */ \"./src/components/slider.js\");\n/* harmony import */ var _components_liveSearch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/liveSearch */ \"./src/components/liveSearch.js\");\n//VIR - TRAVEL BLOG THEME\n//PAGES FUNCTIONS\n//BY: mscbr\n\n\n\nconst liveSearch = new _components_liveSearch__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\njQuery(document).ready(function () {\n  'use strict'; //functions to load\n\n  Object(_components_slowScroll__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  Object(_components_slider__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  liveSearch;\n});\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ })
 

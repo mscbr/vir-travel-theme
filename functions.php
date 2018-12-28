@@ -14,7 +14,7 @@
 
     function load_scripts() {
         //wp_enqueue_scripts('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
-        wp_enqueue_script('main', get_theme_file_uri('/index.js '), NULL, microtime(), true);
+        wp_enqueue_script('index', get_theme_file_uri('/index.js '), array('jquery'), microtime(), true);
     }
 
     function   blog_features() {

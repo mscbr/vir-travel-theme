@@ -14,5 +14,5 @@ jQuery(document).ready(function(){
     jQuerySlowScroll();
     slider();
 
-    liveSearch();
+    liveSearch;
 });
