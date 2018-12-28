@@ -18,6 +18,17 @@
                     <h5>developed by mscbr</h5>
                 </div>
         </footer>
+
+        <div class="search-overlay search-overlay--active">
+            <div class="search-overlay__top">
+                <div class="container">
+                    <button class="search-overlay-btn" ><img src=" <?php bloginfo('template_directory'); ?>/style/icons/iconfinder_icon-ios7-search-strong_211817.svg" class="search-overlay__icon"></button>
+                    <input type="text" class="search-term" placeholder="What are you looking for?" id="search-term" />
+                    <i class="search-overlay__icon">X</i>
+                </div>
+            </div>
+        </div>
+
         <?php wp_footer(); ?>
     </body>
 </html>

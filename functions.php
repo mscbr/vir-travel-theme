@@ -5,6 +5,11 @@
         wp_enqueue_style('header_style', get_template_directory_uri() . '/style/css/header-style.min.css');
         wp_enqueue_style('footer_style', get_template_directory_uri() . '/style/css/footer-style.min.css');
         wp_enqueue_style('single_style', get_template_directory_uri() . '/style/css/single-style.min.css');
+
+        // wp_register_style( 'Font_awesome', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+        // wp_enqueue_style('Font_Awesome');
+
+
     }
 
     function load_scripts() {

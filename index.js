@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/components/liveSearch.js":
+/*!**************************************!*\
+  !*** ./src/components/liveSearch.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n//LIVE SEARCH\nclass Search {\n  constructor() {}\n\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Search);\n\n//# sourceURL=webpack:///./src/components/liveSearch.js?");
+
+/***/ }),
+
 /***/ "./src/components/slider.js":
 /*!**********************************!*\
   !*** ./src/components/slider.js ***!
@@ -118,7 +130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n//SLOWSCROLL\nfunction jQuery
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_slowScroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/slowScroll */ \"./src/components/slowScroll.js\");\n/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/slider */ \"./src/components/slider.js\");\n//VIR - TRAVEL BLOG THEME\n//PAGES FUNCTIONS\n//BY: mscbr\n\n //SLOWSCROLL\n//   function jQuerySlowScroll() {\n//     jQuery(\"a\").on('click', function(event) {\n//         // Make sure this.hash has a value before overriding default behavior\n//         if (this.hash !== \"\") {\n//           // Prevent default anchor click behavior\n//           event.preventDefault();\n//           // Store hash\n//           var hash = this.hash;\n//           // Using jQuery's animate() method to add smooth page scroll\n//           // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area\n//           jQuery('html, body').animate({\n//             scrollTop: jQuery(hash).offset().top\n//           }, 800, function(){\n//             // Add hash (#) to URL when done scrolling (default click behavior)\n//             window.location.hash = hash;\n//           });\n//         } // End if\n//       });\n//   }\n//SLIDER 1.0\n// function slider() {\n//     let slideIndex = 0;\n//     let slideArr = document.getElementsByClassName(\"slide\");\n//     //automatic slidng\n//     function changeSlide() {\n//         //setting display = 'none' for all slides\n//         for (let i = 0; i < slideArr.length; i++) {\n//             slideArr[i].style.display = \"none\";\n//         }\n//         slideArr[slideIndex].style.display = \"initial\";\n//         slideIndex++;\n//         if (slideIndex>slideArr.length-1) {slideIndex = 0;}\n//         setTimeout(changeSlide, 5000);\n//     }\n//     changeSlide();\n//     //span buttons funcitonality\n//     function spanListeners() {\n//         let leftSpan = document.getElementById(\"left-span\");\n//         let rightSpan = document.getElementById(\"right-span\");\n//         //for left-span changeIndex should be -1 & for rigt-span 1\n//         function switchSlide(changeIndex) {\n//             slideIndex += changeIndex;\n//             for (let i = 0; i < slideArr.length; i++) {\n//                 slideArr[i].style.display = \"none\";\n//             }\n//             if (slideIndex>slideArr.length-1) {\n//                 slideIndex = 0;\n//             } else if (slideIndex<0) {\n//                 slideIndex = slideArr.length-1;\n//             }\n//             slideArr[slideIndex].style.display = \"initial\";\n//         }\n//         leftSpan.addEventListener(\"click\", function() {switchSlide(-1);});\n//         rightSpan.addEventListener(\"click\", function() {switchSlide(1);});\n//     }\n//     spanListeners();\n// }\n\njQuery(document).ready(function () {\n  'use strict'; //functions to load\n\n  Object(_components_slowScroll__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  Object(_components_slider__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n});\n\n//# sourceURL=webpack:///./src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_slowScroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/slowScroll */ \"./src/components/slowScroll.js\");\n/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/slider */ \"./src/components/slider.js\");\n/* harmony import */ var _components_liveSearch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/liveSearch */ \"./src/components/liveSearch.js\");\n//VIR - TRAVEL BLOG THEME\n//PAGES FUNCTIONS\n//BY: mscbr\n\n\n\nconst liveSearch = new _components_liveSearch__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\njQuery(document).ready(function () {\n  'use strict'; //functions to load\n\n  Object(_components_slowScroll__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  Object(_components_slider__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  liveSearch();\n});\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ })
 
