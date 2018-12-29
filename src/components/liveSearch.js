@@ -18,10 +18,12 @@ class Search {
     //methods
     openOverlay() {
         event.preventDefault();
+        document.getElementsByTagName("body")[0].classList.add("body-no-scroll");
         this.searchOverlay.classList.add("search-overlay--active");
     }
 
     closeOverlay() {
+        document.getElementsByTagName("body")[0].classList.remove("body-no-scroll");
         this.searchOverlay.classList.remove("search-overlay--active");
     }
 }

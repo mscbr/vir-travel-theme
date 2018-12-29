@@ -905,4 +905,8 @@ body.admin-bar .search-overlay {
   padding: 0 16px;
   position: relative;
 }
+
+.body-no-scroll {
+  overflow: hidden;
+}
 /*# sourceMappingURL=main-style.css.map */
