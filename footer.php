@@ -27,6 +27,9 @@
                     <i id="search-overlay-btn-close" class="search-overlay__icon">X</i>
                 </div>
             </div>
+            <div class="container">
+                <div id="search-overlay__results"></div>
+            </div>
         </div>
 
         <?php wp_footer(); ?>
