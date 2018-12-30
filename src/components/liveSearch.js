@@ -33,7 +33,7 @@ class Search {
                     this.resultsDiv.innerHTML = "<div class='spinner-loader'></div>";
                     this.isSpinnerVisible = true;  
                 }
-                this.typingTimer = setTimeout(this.getResults.bind(this), 800); 
+                this.typingTimer = setTimeout(this.getResults.bind(this), 500); 
             } else {
                 this.resultsDiv.innerHTML = "";
                 this.isSpinnerVisible = false;
@@ -43,23 +43,30 @@ class Search {
         this.previousValue = this.searchField.value;
     }
     getResults() {
-        jQuery.getJSON(blogData.root_url + "/wp-json/wp/v2/posts?search=" + this.searchField.value, posts => {
-            jQuery.getJSON( blogData.root_url + "/wp-json/wp/v2/pages?search=" + this.searchField.value, (pages) => {
-                let combinedResults = posts.concat(pages);
-                this.resultsDiv.innerHTML = `
-                <h2 class="search-overlay__section-title">Genneral Information</h2>
-                ${combinedResults.length ? '<ul class="link-list min-list">': '<p>No general informaion matches this search.'}
-                    ${combinedResults.map(post => {
-                        return `<li><a href='${post.link}'>${post.title.rendered}</a></li>`;
-                    }).join(``)}
-                    ${combinedResults.length ? '</ul>' : ''}     
-                `;
-                this.isSpinnerVisible = false;
-                
-            });
+        jQuery.when(
+            jQuery.getJSON(blogData.root_url + "/wp-json/wp/v2/posts?search=" + this.searchField.value), 
+            jQuery.getJSON( blogData.root_url + "/wp-json/wp/v2/pages?search=" + this.searchField.value)
+            ).then((posts, pages) => {
+            
+                    let combinedResults = posts[0].concat(pages[0]);
+                    this.resultsDiv.innerHTML = `
+                    <h2 class="search-overlay__section-title">Genneral Information</h2>
+                    ${combinedResults.length ? '<ul class="link-list min-list">': '<p>No general informaion matches this search.'}
+                        ${combinedResults.map(post => {
+                            return `<li><a href='${post.link}'>${post.title.rendered}</a></li>`;
+                        }).join(``)}
+                        ${combinedResults.length ? '</ul>' : ''}     
+                    `;
+                    this.isSpinnerVisible = false;
+                    
+                }, () => {
+                    //if ERROR above
+                    this.resultsDiv.innerHTML = "Please try agian, unexpected ERR0R";
+                });
+          
+
 
         
-            })
     }
     keyPressDispatcher(e) {
         if (e.keyCode === 27 && this.isOverlayOpen ) {
