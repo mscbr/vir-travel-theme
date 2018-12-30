@@ -829,6 +829,7 @@ body.admin-bar .search-overlay {
 }
 
 .search-overlay__section-title {
+  text-align: left;
   margin: 30px 0 1px 0;
   font-weight: 400;
   color: #0D3B66;
@@ -941,5 +942,32 @@ body.admin-bar .search-overlay {
   border-top-color: black;
   -webkit-animation: spin 1s infinite linear;
   animation: spin 1s infinite linear;
+}
+
+.link-list li {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  border-bottom: 1px dotted #DEDEDE;
+}
+
+.search-overlay .link-list li {
+  font-size: 1.3rem;
+}
+
+.link-list li:last-child {
+  border-bottom: none;
+}
+
+.link-list a {
+  color: #F95738;
+}
+
+.min-list {
+  padding: 0;
+  margin: 0;
+}
+
+.min-list li {
+  list-style: none;
 }
 /*# sourceMappingURL=main-style.css.map */

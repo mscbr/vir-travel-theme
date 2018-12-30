@@ -43,8 +43,15 @@ class Search {
         this.previousValue = this.searchField.value;
     }
     getResults() {
-        jQuery.getJSON("http://virtualtravel.local/wp-json/wp/v2/posts?search=" + this.searchField.value, function(posts) {
-            alert(posts[0].title.rendered);
+        jQuery.getJSON("http://virtualtravel.local/wp-json/wp/v2/posts?search=" + this.searchField.value, posts => {
+            this.resultsDiv.innerHTML = `
+                <h2 class="search-overlay__section-title">Genneral Information</h2>
+                <ul class="link-list min-list">
+                    ${posts.map(post => {
+                        return `<li><a href='${post.link}'>${post.title.rendered}</a></li>`;
+                    }).join(``)}    
+                </ul>
+            `;
         });
 
         this.resultsDiv.innerHTML = "paragraph";
