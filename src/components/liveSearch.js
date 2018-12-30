@@ -43,19 +43,23 @@ class Search {
         this.previousValue = this.searchField.value;
     }
     getResults() {
-        jQuery.getJSON("http://virtualtravel.local/wp-json/wp/v2/posts?search=" + this.searchField.value, posts => {
-            this.resultsDiv.innerHTML = `
+        jQuery.getJSON(blogData.root_url + "/wp-json/wp/v2/posts?search=" + this.searchField.value, posts => {
+            jQuery.getJSON( blogData.root_url + "/wp-json/wp/v2/pages?search=" + this.searchField.value, (pages) => {
+                let combinedResults = posts.concat(pages);
+                this.resultsDiv.innerHTML = `
                 <h2 class="search-overlay__section-title">Genneral Information</h2>
-                <ul class="link-list min-list">
-                    ${posts.map(post => {
+                ${combinedResults.length ? '<ul class="link-list min-list">': '<p>No general informaion matches this search.'}
+                    ${combinedResults.map(post => {
                         return `<li><a href='${post.link}'>${post.title.rendered}</a></li>`;
-                    }).join(``)}    
-                </ul>
-            `;
-        });
+                    }).join(``)}
+                    ${combinedResults.length ? '</ul>' : ''}     
+                `;
+                this.isSpinnerVisible = false;
+                
+            });
 
-        this.resultsDiv.innerHTML = "paragraph";
-        this.isSpinnerVisible = false;
+        
+            })
     }
     keyPressDispatcher(e) {
         if (e.keyCode === 27 && this.isOverlayOpen ) {
@@ -66,6 +70,8 @@ class Search {
     openOverlay() {
         event.preventDefault();
         document.getElementsByTagName("body")[0].classList.add("body-no-scroll");
+        this.searchField.value = '';
+        setTimeout(() => this.searchField.focus(), 301);
         this.searchOverlay.classList.add("search-overlay--active");
         this.isOverlayOpen = true;
     }

@@ -13,8 +13,11 @@
     }
 
     function load_scripts() {
-        //wp_enqueue_scripts('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
+        
         wp_enqueue_script('index', get_theme_file_uri('/index.js '), array('jquery'), microtime(), true);
+        wp_localize_script('index', 'blogData', array(
+            'root_url' => get_site_url()
+        ));
     }
 
     function   blog_features() {
