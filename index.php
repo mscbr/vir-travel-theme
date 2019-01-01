@@ -19,9 +19,7 @@
             <a href="#about" class="nav-link">ABOUT</a>
             <a href="<?php echo site_url('/archive'); ?>" class="nav-link">ARCHIVE</a>
             <a href="" class="nav-link" id="search-trigger">SEARCH</a>
-            <!-- <button  class="nav-link" id="search-trigger">SEARCH</button> -->
-
-            <a href="#" class="nav-link">CONTACT</a>
+            <a href="<?php echo site_url('/contact-us'); ?>" class="nav-link">CONTACT</a>
             <div class="nav-dropdown">
                 <button class="navbtn">FEATURED</button>
                 <div class="drop-content">
