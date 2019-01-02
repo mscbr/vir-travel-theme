@@ -90,7 +90,7 @@
                 <div id="sidebar-pics-holder">
                     <?php
 
-                        $access_token="430962433.1677ed0.d8ff8c29b801441babdf4a52f4e0d0d9";
+                        $access_token="9978220853.1677ed0.de06a1ceb4c2457a9febfa80064d0b3b";
                         $photo_count=9;
                             
                         $json_link="https://api.instagram.com/v1/users/self/media/recent/?";
